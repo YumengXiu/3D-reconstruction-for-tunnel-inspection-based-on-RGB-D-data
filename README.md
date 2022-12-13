@@ -27,3 +27,12 @@ python feedBagInput.py -h
 ```
 for instructions and follow it to extract data, feed pose.
 After that, put the generated database file into colmap workspace, specify workspace and source input (images) to COLMAP and run the algorithm. 
+
+## ASH
+This method is based on [W. Dong, Y. Lao, M. Kaess and V. Koltun: ASH: A Modern Framework for Parallel Spatial Hashing in 3D Perception, arXiv, 2021.](https://arxiv.org/abs/2110.00511) and [Open3D](https://github.com/isl-org/Open3D). Follow the instruction [here](http://www.open3d.org/docs/release/getting_started.html) for the installation.
+
+To run, checkout to `ASH/` and run belows,
+```
+python src/dense_slam_gui.py --config configs/tunnel_config.yml \   # or simulation_config.yml
+                             --device cuda:0                        # or cpu:0 if no cuda device
+```
