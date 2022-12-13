@@ -1,0 +1,34 @@
+dataset: 'azure'
+sync_method: strict
+coarse: True
+tracking:
+  vis_freq: 10
+  vis_inside_freq: 10
+  ignore_edge_W: 20
+  ignore_edge_H: 20
+  seperate_LR: False
+  const_speed_assumption: True
+  gt_camera: True
+  lr: 0.0005
+  pixels: 1000
+  iters: 500
+mapping:
+  every_frame: 5
+  vis_freq: 10
+  vis_inside_freq: 10
+  mesh_freq: 50
+  ckpt_freq: 500
+  keyframe_every: 50
+  mapping_window_size: 10
+  pixels: 5000
+  iters_first: 1000
+  iters: 600
+cam:
+  H: 480 
+  W: 640
+  fx: 386.22674560546875
+  fy: 386.22674560546875
+  cx: 317.3930969238281
+  cy: 239.78431701660156
+  png_depth_scale: 1000.0 #for depth image in png format
+  crop_edge: 0

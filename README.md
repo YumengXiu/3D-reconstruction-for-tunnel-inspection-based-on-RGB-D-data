@@ -1,2 +1,19 @@
 # 3D-reconstruction-for-tunnel-inspection-based-on-RGB-D-data
 16833 final Project
+
+
+## NeRF-based Method
+NeRF-based method is based on [NICE-SLAM repo](https://github.com/cvg/nice-slam). First follow the readme of [NICE-SLAM repo](https://github.com/cvg/nice-slam) to install all the requirement and run the [demo](https://github.com/cvg/nice-slam#demo) successfully.
+
+Then prepare the data of tunnel in the same format of ScanNet (the one used in the deme above). Change the path `cd  nerf-based` and run the following command to run the NeRF-based SLAM. To run the simulation, run `python -W ignore run.py  configs/Demo/new_sim.yaml --nice` instead.
+
+```
+python -W ignore run.py configs/Demo/new.yaml --imap
+```
+
+To visualize the results of tracking and mapping, run the following with the real data. For the simulation, run `python visualizer.py configs/Demo/new_sim.yaml --nice --no_gt_traj --save_rendering` instead.
+
+```
+python visualizer.py configs/Demo/new.yaml --imap --no_gt_traj --save_rendering
+```
+

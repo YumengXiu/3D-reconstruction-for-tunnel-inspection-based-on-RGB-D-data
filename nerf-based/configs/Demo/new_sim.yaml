@@ -1,0 +1,42 @@
+dataset: 'scannet'
+sync_method: loose
+coarse: True
+verbose: True
+meshing:
+  resolution: 256
+tracking:
+  vis_freq: 30
+  vis_inside_freq: 30
+  ignore_edge_W: 20
+  ignore_edge_H: 20
+  seperate_LR: False
+  gt_camera: False
+  const_speed_assumption: True
+  lr: 0.0005      
+  pixels: 1000
+  iters: 30
+mapping:
+  every_frame: 10
+  vis_freq: 30
+  vis_inside_freq: 30
+  mesh_freq: 30
+  ckpt_freq: 30
+  keyframe_every: 50
+  mapping_window_size: 10
+  pixels: 1000
+  iters_first: 400
+  iters: 10
+  bound: [[-5, 5],[-5,5],[-5,5]]
+  marching_cubes_bound: [[-5, 5],[-5,5],[-5,5]]
+cam: 
+  H: 480 
+  W: 640
+  fx: 554.254691191187
+  fy: 554.254691191187
+  cx: 320.5
+  cy: 240.5
+  png_depth_scale: 10. #for depth image in png format
+  crop_edge: 10
+data:
+  input_folder: Datasets/Demo
+  output: output/new_sim

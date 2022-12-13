@@ -1,0 +1,21 @@
+inherit_from: configs/Own/own.yaml
+cam:
+  H: 480 
+  W: 640
+  fx: 386.22674560546875
+  fy: 386.22674560546875
+  cx: 317.3930969238281
+  cy: 239.78431701660156
+  png_depth_scale: 1000.0 #for depth image in png format
+  crop_edge: 0
+mapping:
+  bound: [[4, 12],[-3,-2],[0, 3]]
+  # [[-2,3],[-1.5,1.5],[-3,-1]]
+  #[[4, 12],[-3,-2],[0, 3]]
+  marching_cubes_bound: [[4, 12],[-3,-2],[0, 3]]
+  # [[-2,3],[-1.5,1.5],[-3,-1]]
+  # [[-2,4],[-2.5,1.5],[-3,3]]
+  #[[4, 12],[-3,-2],[0, 3]]
+data:
+  input_folder: Datasets/Own/dataset
+  output: output/Own_lr00005/dataset
