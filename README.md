@@ -17,3 +17,5 @@ To visualize the results of tracking and mapping, run the following with the rea
 python visualizer.py configs/Demo/new.yaml --imap --no_gt_traj --save_rendering
 ```
 
+## SfM-based Method
+This method is based on [COLMAP SFM](https://colmap.github.io/). Follow the readme to install Colmap and run it. feedBagInput.py is the file to extract rgb images as well as poses and then feed the pose into the colmap database. Note that in this process, make sure the data(.bag), image dir and colmap workspace are in same dir.
