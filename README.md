@@ -18,11 +18,12 @@ python visualizer.py configs/Demo/new.yaml --imap --no_gt_traj --save_rendering
 ```
 
 ## SfM-based Method
-This method is based on [COLMAP SFM](https://colmap.github.io/). Follow the readme to install Colmap and run it. feedBagInput.py is the file to extract rgb images as well as poses and then feed the pose into the colmap database. Note that in this process, make sure the data(.bag), image dir and colmap workspace are in same dir.
-To run Colmap, follow the instructions on [COLMAP SFM](https://colmap.github.io/).
+This method is based on [COLMAP SFM](https://colmap.github.io/). Follow the readme to install Colmap and run it. feedBagInput.py is the file to extract rgb images as well as poses and then feed the pose into the colmap database. Note that in this process, make sure the data(.bag), image dir and colmap workspace are in same dir. 
+To run Colmap, follow the instructions on [COLMAP SFM](https://colmap.github.io/) to install colmap and run it through either command line or GUI.
 To input pose estimation to COLMAP:
 run
 ```
 python feedBagInput.py -h 
 ```
-for instructions and follow it to extract data, feed pose
+for instructions and follow it to extract data, feed pose.
+After that, put the generated database file into colmap workspace, specify workspace and source input (images) to COLMAP and run the algorithm. 
